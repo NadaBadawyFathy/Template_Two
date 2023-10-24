@@ -556,3 +556,450 @@ header > .container > nav .form i {
     background-color: var(--main-color);
 }
 /* End stats */
+/* Start skills */
+.our-skills {
+    padding: var(--section-padding) 0;
+}
+.our-skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (min-width: 992px) {
+    .our-skills .container > div{
+        flex-basis: 45%;
+    }
+}
+.our-skills .container > div > h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+.our-skills .container > div > p {
+    text-align: center;
+    color: #777;
+    line-height: 2;
+    margin-bottom: 60px;
+}
+.our-skills .content {
+    display: flex;
+    margin-bottom: 30px;
+}
+.our-skills .content img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100%;
+    margin-right: 40px;
+    transition: .3s;
+}
+.our-skills .content img:hover {
+    transform: scale(1.2);
+}
+.our-skills .content .text {
+    line-height: 1.8;
+    border-bottom: 1px solid #ccc;
+}
+.our-skills .content .text p {
+    /* display: flex;
+    justify-content: flex-end; */
+    text-align: right;
+    font-weight: normal;
+    color: #19c8fa;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+@media (max-width: 767px) {
+    .our-skills .container .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .our-skills .container .content img {
+        margin: 0 auto 40px;
+    }
+    .our-skills .container .content .text p {
+        text-align: left;
+    }
+}
+.testimonials .bullets {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 60px;
+}
+.testimonials .bullets li {
+    color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #a2a2a2;
+    margin: 0 5px;
+}
+.testimonials .bullets .active {
+    background-color: var(--main-color);
+    border: var(--main-color);
+}
+.our-skills .prog-holder {
+    margin-bottom: 40px;
+}
+.our-skills .prog-holder h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.our-skills .prog-holder .prog {
+    height: 30px;
+    background-color: #dedadc;
+}
+.our-skills .prog-holder .prog span {
+    height: 100%;
+    background-color: var(--main-color);
+    display: block;
+    position: relative;
+}
+.our-skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    top: -45px;
+    right: -20px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+.our-skills .prog-holder .prog span::after {
+    content: " ";
+    position: absolute;
+    top: -17px;
+    right: -8px;
+    border: 8px solid;
+    border-color: black transparent transparent transparent;
+}
+/* End skills */
+/* Start quote */
+.quote {
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    padding: var(--section-padding) 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.quote::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+}
+.quote .container q {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+}
+.quote .container span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-top: 20px;
+}
+/* End quote */
+/* Start pricing */
+.pricing {
+    padding: var(--section-padding) 0;
+    text-align: center;
+}
+.pricing .container .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+.pricing .container .plans .plan {
+    background-color: #fcfcfc;
+}
+.pricing .container .plans .plan .head {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .plans .plan .head h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.pricing .container .plans .plan .head span {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+}
+.pricing .container .plans .plan .head span::after {
+    content: '/Mo';
+    font-size: 20px;
+    position: relative;
+    right: -15px;
+}
+.pricing .container .plans .plan .head span::before {
+    content: '$';
+    font-size: 25px;
+    position: relative;
+    top: -40px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+.pricing .container .plans .plan ul {
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .plans .plan ul li {
+    padding: 20px;
+    position: relative;
+}
+.pricing .container .plans .plan ul li:not(:last-child):after {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    width: 140px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pricing .container .plans .plan a {
+    color: var(--main-color);
+    display: block;
+    width: fit-content;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+    margin: 30px auto;
+    background-image: linear-gradient(to left,
+    transparent,
+    transparent 50%,
+    var(--main-color) 50%,
+    #1990fa);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: .5s;
+    cursor: pointer;
+}
+.pricing .container .plans .plan a:hover {
+    background-position: 0 100%;
+    color: white;
+}
+.pricing .container .contact-us {
+    font-size: 20px;
+    margin: 50px auto 20px;
+}
+.pricing .container .contact-link {
+    display: block;
+    width: fit-content;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    margin: 0 auto;
+    color: white;
+}
+/* End pricing */
+/* Start subscribe */
+.subscribe {
+    padding: var(--section-padding) 0;
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+}
+.subscribe::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.subscribe .container {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+.subscribe form {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+}
+.subscribe .container form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    color: white;
+}
+.subscribe .container form input[type="email"] {
+    background: none;
+    border: 1px solid white;
+    padding: 20px 20PX 20PX 60px;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+    border-right: none;
+}
+.subscribe .container form input[type="email"]:focus ,
+.subscribe .container form input[type="submit"]:focus {
+    outline: none;
+}
+.subscribe .container form input[type="submit"] {
+    width: 130px;
+    border: 1px solid white;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-left: none;
+    text-transform: uppercase;
+}
+.subscribe form ::placeholder {
+    color: white;
+}
+.subscribe .container p {
+    color: white;
+    position: relative;
+    z-index: 2;
+    line-height: 2;
+    margin-left: 50px;
+}
+@media (max-width: 991px) {
+    .subscribe .container p {
+        margin: 30px 0 0;
+    }
+}
+/* End subscribe */
+/* Start contact */
+.contact {
+    padding: var(--section-padding) 0;
+}
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+}
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column;
+    }
+    .contact .content form {
+        order: 2;
+    }
+    .contact .content .info {
+        order: 1;
+        text-align: center;
+    }
+}
+.contact form .main-input {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    caret-color: var(--main-color);
+}
+.contact form .main-input:focus {
+    outline: none;
+}
+.contact form textarea {
+    height: 200px;
+}
+.contact form ::placeholder {
+    color: var(--main-color);
+}
+.contact form input[type="submit"] {
+    display: block;
+    width: fit-content;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.contact .info {
+    flex-basis: 25%;
+}
+.contact .info h4 {
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.contact .info span {
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+}
+.contact .info span:last-of-type {
+    margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+    .contact .info span:last-of-type {
+        margin-bottom: 30px;
+    }
+}
+.contact .info address {
+    line-height: 2;
+    color: #777;
+}
+@media (max-width: 767px) {
+    .contact .info address {
+        margin-bottom: 40px;
+    }
+}
+/* End contact */
+/* Start footer */
+.footer {
+    padding: calc(var(--section-padding) / 2)0;
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.footer::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+.footer .container {
+    position: relative;
+}
+.footer img {
+    margin-bottom: 40px;
+}
+.footer p:first-of-type {
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: 0 auto 20px;
+}
+.footer .socail-icons i{
+    padding: 10px 15px;
+    margin-bottom: 60px;
+    transition: .3s;
+}
+.footer .social-icons i:hover {
+    color: var(--main-color);
+}
+.footer p:last-of-type span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+/* End footer */
